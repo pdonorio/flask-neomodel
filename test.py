@@ -1,25 +1,5 @@
+# -*- coding: utf-8 -*-
 
-# flask-neomodel
-
-An attempt to produce a flask plugin for [`neomodel`](http://neomodel.readthedocs.io/en/latest/) class mapping of GraphDB objects.
-
----
-
-Basic setup:
-
-```bash
-# install the library
-pip3 install git+https://github.com/pdonorio/flask-neomodel.git@master
-
-# launch a graphdb with docker
-docker run --rm \
-    -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/test \
-    neo4j:3.3.5
-
-```
-
-Then you can test this snippet:
-```python
 from flask import Flask
 from flask_neomodel import NeoModel
 
@@ -41,4 +21,3 @@ def test_neomodel():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
-```
